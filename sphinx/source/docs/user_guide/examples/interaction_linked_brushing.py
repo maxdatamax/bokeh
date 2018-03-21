@@ -1,9 +1,7 @@
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.layouts import gridplot
 from bokeh.models import ColumnDataSource
 from bokeh.plotting import figure
-
-output_file("brushing.html")
 
 x = list(range(-20, 21))
 y0 = [abs(xx) for xx in x]

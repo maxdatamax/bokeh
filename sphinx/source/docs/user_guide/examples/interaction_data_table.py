@@ -1,12 +1,10 @@
 from datetime import date
 from random import randint
 
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.layouts import widgetbox
 from bokeh.models import ColumnDataSource
 from bokeh.models.widgets import DataTable, DateFormatter, TableColumn
-
-output_file("data_table.html")
 
 data = dict(
         dates=[date(2014, 3, i+1) for i in range(10)],

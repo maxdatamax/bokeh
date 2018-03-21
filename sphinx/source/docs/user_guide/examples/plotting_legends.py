@@ -1,10 +1,8 @@
 import numpy as np
-from bokeh.plotting import output_file, show, figure
+from bokeh.plotting import show, figure
 
 x = np.linspace(0, 4*np.pi, 100)
 y = np.sin(x)
-
-output_file("legend.html")
 
 p = figure()
 

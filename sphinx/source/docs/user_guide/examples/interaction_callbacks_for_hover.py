@@ -1,7 +1,5 @@
-from bokeh.plotting import figure, output_file, show
+from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, HoverTool, CustomJS
-
-output_file("hover_callback.html")
 
 # define some points and a little graph between them
 x = [2, 3, 5, 6, 8, 7]

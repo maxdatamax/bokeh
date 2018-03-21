@@ -1,7 +1,5 @@
-from bokeh.plotting import figure, show, output_file
+from bokeh.plotting import figure, show
 from bokeh.tile_providers import CARTODBPOSITRON
-
-output_file("tile.html")
 
 # range bounds supplied in web mercator coordinates
 p = figure(x_range=(-2000000, 6000000), y_range=(-1000000, 7000000),

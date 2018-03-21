@@ -1,8 +1,6 @@
 from bokeh.layouts import column
 from bokeh.models import CustomJS, ColumnDataSource, Slider
-from bokeh.plotting import Figure, output_file, show
-
-output_file("js_on_change.html")
+from bokeh.plotting import Figure, show
 
 x = [x*0.005 for x in range(0, 200)]
 y = x

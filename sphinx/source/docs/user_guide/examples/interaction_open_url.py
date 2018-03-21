@@ -1,7 +1,5 @@
 from bokeh.models import ColumnDataSource, OpenURL, TapTool
-from bokeh.plotting import figure, output_file, show
-
-output_file("openurl.html")
+from bokeh.plotting import figure, show
 
 p = figure(plot_width=400, plot_height=400,
            tools="tap", title="Click the Dots")

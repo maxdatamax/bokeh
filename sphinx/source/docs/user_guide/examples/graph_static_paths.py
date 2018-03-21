@@ -1,6 +1,6 @@
 import math
 
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.plotting import figure
 from bokeh.models import GraphRenderer, StaticLayoutProvider, Oval
 from bokeh.palettes import Spectral8
@@ -44,5 +44,4 @@ graph.edge_renderer.data_source.data['ys'] = ys
 
 plot.renderers.append(graph)
 
-output_file("graph.html")
 show(plot)

@@ -1,9 +1,7 @@
-from bokeh.plotting import figure, show, output_file
+from bokeh.plotting import figure, show
 from bokeh.models import Band, ColumnDataSource
 import pandas as pd
 import numpy as np
-
-output_file("band.html", title="band.py example")
 
 # Create some random data
 x = np.random.random(2500) * 140 - 20

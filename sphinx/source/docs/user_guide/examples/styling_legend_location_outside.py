@@ -1,11 +1,9 @@
 import numpy as np
 from bokeh.models import Legend
-from bokeh.plotting import figure, show, output_file
+from bokeh.plotting import figure, show
 
 x = np.linspace(0, 4*np.pi, 100)
 y = np.sin(x)
-
-output_file("legend_labels.html")
 
 p = figure(toolbar_location="above")
 

@@ -1,9 +1,7 @@
 from bokeh.core.properties import Instance
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.models import ColumnDataSource, Tool
 from bokeh.plotting import figure
-
-output_file('tool.html')
 
 JS_CODE = """
 import * as p from "core/properties"

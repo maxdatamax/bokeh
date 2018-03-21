@@ -1,7 +1,4 @@
-from bokeh.plotting import figure, output_file, show
-
-# output to static HTML file
-output_file("line.html")
+from bokeh.plotting import figure, show
 
 p = figure(plot_width=400, plot_height=400)
 

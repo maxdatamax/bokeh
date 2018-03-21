@@ -1,8 +1,6 @@
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.models import FactorRange
 from bokeh.plotting import figure
-
-output_file("mixed.html")
 
 factors = [
     ("Q1", "jan"), ("Q1", "feb"), ("Q1", "mar"),

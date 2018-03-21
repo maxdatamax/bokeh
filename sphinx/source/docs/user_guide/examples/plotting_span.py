@@ -2,10 +2,8 @@ from datetime import datetime as dt
 import time
 
 from bokeh.sampledata.daylight import daylight_warsaw_2013
-from bokeh.plotting import figure, show, output_file
+from bokeh.plotting import figure, show
 from bokeh.models import Span
-
-output_file("span.html", title="span.py example")
 
 p = figure(x_axis_type="datetime", y_axis_type="datetime")
 

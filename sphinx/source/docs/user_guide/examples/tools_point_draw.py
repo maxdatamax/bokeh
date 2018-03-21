@@ -1,7 +1,5 @@
-from bokeh.plotting import figure, output_file, show, Column
+from bokeh.plotting import figure, show, Column
 from bokeh.models import DataTable, TableColumn, PointDrawTool, ColumnDataSource
-
-output_file("tools_point_draw.html")
 
 p = figure(x_range=(0, 10), y_range=(0, 10), tools=[],
            title='Point Draw Tool')

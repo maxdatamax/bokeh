@@ -1,12 +1,10 @@
 import pandas as pd
 
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.models import BasicTicker, ColorBar, ColumnDataSource, LinearColorMapper, PrintfTickFormatter
 from bokeh.plotting import figure
 from bokeh.sampledata.unemployment1948 import data
 from bokeh.transform import transform
-
-output_file("unemploymemt.html")
 
 data.Year = data.Year.astype(str)
 data = data.set_index('Year')

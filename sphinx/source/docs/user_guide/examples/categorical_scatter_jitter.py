@@ -1,10 +1,8 @@
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.models import ColumnDataSource
 from bokeh.plotting import figure
 from bokeh.sampledata.commits import data
 from bokeh.transform import jitter
-
-output_file("bars.html")
 
 DAYS = ['Sun', 'Sat', 'Fri', 'Thu', 'Wed', 'Tue', 'Mon']
 

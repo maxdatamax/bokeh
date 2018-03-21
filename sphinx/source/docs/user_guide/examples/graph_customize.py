@@ -1,6 +1,6 @@
 import math
 
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.plotting import figure
 from bokeh.models import GraphRenderer, StaticLayoutProvider, Oval
 from bokeh.palettes import Spectral8
@@ -31,5 +31,4 @@ graph.layout_provider = StaticLayoutProvider(graph_layout=graph_layout)
 
 plot.renderers.append(graph)
 
-output_file('graph.html')
 show(plot)

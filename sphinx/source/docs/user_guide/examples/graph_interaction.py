@@ -1,6 +1,6 @@
 import networkx as nx
 
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.models import Plot, Range1d, MultiLine, Circle, HoverTool, TapTool, BoxSelectTool
 from bokeh.models.graphs import from_networkx, NodesAndLinkedEdges, EdgesAndLinkedNodes
 from bokeh.palettes import Spectral4
@@ -28,5 +28,4 @@ graph_renderer.inspection_policy = EdgesAndLinkedNodes()
 
 plot.renderers.append(graph_renderer)
 
-output_file("interactive_graphs.html")
 show(plot)

@@ -1,11 +1,9 @@
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.models import ColumnDataSource
 from bokeh.palettes import Spectral5
 from bokeh.plotting import figure
 from bokeh.sampledata.autompg import autompg as df
 from bokeh.transform import factor_cmap
-
-output_file("groupby.html")
 
 df.cyl = df.cyl.astype(str)
 group = df.groupby('cyl')

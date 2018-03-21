@@ -1,14 +1,12 @@
 from numpy import linspace
 from scipy.stats.kde import gaussian_kde
 
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.models import ColumnDataSource, FixedTicker, PrintfTickFormatter
 from bokeh.plotting import figure
 from bokeh.sampledata.perceptions import probly
 
 import colorcet as cc
-
-output_file("joyplot.html")
 
 def joy(category, data, scale=20):
     return list(zip([category]*len(data), scale*data))

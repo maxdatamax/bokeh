@@ -1,8 +1,6 @@
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.layouts import widgetbox
 from bokeh.models.widgets import Button, RadioButtonGroup, Select, Slider
-
-output_file("layout_widgets.html")
 
 # create some widgets
 slider = Slider(start=0, end=10, value=1, step=.1, title="Slider")

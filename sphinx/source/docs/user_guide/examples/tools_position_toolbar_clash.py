@@ -1,6 +1,4 @@
-from bokeh.plotting import figure, output_file, show
-
-output_file("toolbar.html")
+from bokeh.plotting import figure, show
 
 # create a new plot with the toolbar below
 p = figure(plot_width=400, plot_height=400,

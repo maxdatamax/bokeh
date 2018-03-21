@@ -1,4 +1,4 @@
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.plotting import figure
 from bokeh.layouts import layout
 from bokeh.models import Toggle, BoxAnnotation, CustomJS
@@ -23,7 +23,5 @@ callback1.args = {'toggle': toggle1, 'object': box}
 callback2 = CustomJS.from_coffeescript(code=code, args={})
 toggle2 = Toggle(label="Pink Line", button_type="success", callback=callback2)
 callback2.args = {'toggle': toggle2, 'object': invisible_line}
-
-output_file("styling_visible_annotation_with_interaction.html")
 
 show(layout([p], [toggle1, toggle2]))

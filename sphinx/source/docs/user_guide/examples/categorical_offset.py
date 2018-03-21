@@ -1,7 +1,5 @@
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.plotting import figure
-
-output_file("offset.html")
 
 fruits = ['Apples', 'Pears', 'Nectarines', 'Plums', 'Grapes', 'Strawberries']
 

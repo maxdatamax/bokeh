@@ -1,7 +1,5 @@
-from bokeh.plotting import output_file, show
+from bokeh.plotting import show
 from bokeh.models import Arrow, OpenHead, NormalHead, VeeHead, Label, Plot, Range1d
-
-output_file("arrow_styles.html")
 
 ARROW_HEADS = [OpenHead, NormalHead, VeeHead]
 HEIGHT = 35 * len(ARROW_HEADS)

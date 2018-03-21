@@ -1,7 +1,5 @@
-from bokeh.plotting import figure, output_file, show, ColumnDataSource
+from bokeh.plotting import figure, show, ColumnDataSource
 from bokeh.models import HoverTool
-
-output_file("toolbar.html")
 
 source = ColumnDataSource(data=dict(
     x=[1, 2, 3, 4, 5],

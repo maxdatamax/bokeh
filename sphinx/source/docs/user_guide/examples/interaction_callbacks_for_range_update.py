@@ -2,9 +2,7 @@ import numpy as np
 
 from bokeh.layouts import row
 from bokeh.models import ColumnDataSource, CustomJS, Rect
-from bokeh.plotting import output_file, figure, show
-
-output_file('range_update_callback.html')
+from bokeh.plotting import figure, show
 
 N = 4000
 

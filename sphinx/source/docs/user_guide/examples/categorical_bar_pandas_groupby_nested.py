@@ -1,11 +1,9 @@
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.models import ColumnDataSource, HoverTool
 from bokeh.plotting import figure
 from bokeh.palettes import Spectral5
 from bokeh.sampledata.autompg import autompg_clean as df
 from bokeh.transform import factor_cmap
-
-output_file("bars.html")
 
 df.cyl = df.cyl.astype(str)
 df.yr = df.yr.astype(str)

@@ -1,8 +1,6 @@
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.models import ColumnDataSource, GMapOptions
 from bokeh.plotting import gmap
-
-output_file("gmap.html")
 
 map_options = GMapOptions(lat=30.2861, lng=-97.7394, map_type="roadmap", zoom=11)
 

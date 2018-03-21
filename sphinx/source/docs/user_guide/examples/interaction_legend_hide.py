@@ -15,6 +15,6 @@ for data, name, color in zip([AAPL, IBM, MSFT, GOOG], ["AAPL", "IBM", "MSFT", "G
 p.legend.location = "top_left"
 p.legend.click_policy="hide"
 
-output_file("interactive_legend.html", title="interactive_legend.py example")
+output_file("interaction_legend_hide.html", title="interaction_legend_hide.py example")
 
 show(p)

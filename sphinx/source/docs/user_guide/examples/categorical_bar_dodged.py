@@ -1,10 +1,8 @@
 from bokeh.core.properties import value
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.models import ColumnDataSource
 from bokeh.plotting import figure
 from bokeh.transform import dodge
-
-output_file("dodged_bars.html")
 
 fruits = ['Apples', 'Pears', 'Nectarines', 'Plums', 'Grapes', 'Strawberries']
 years = ['2015', '2016', '2017']

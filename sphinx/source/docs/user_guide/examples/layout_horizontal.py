@@ -1,8 +1,6 @@
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.layouts import row
 from bokeh.plotting import figure
-
-output_file("layout.html")
 
 x = list(range(11))
 y0 = x

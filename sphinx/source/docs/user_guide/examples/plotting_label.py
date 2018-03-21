@@ -1,7 +1,5 @@
-from bokeh.plotting import figure, show, output_file
+from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, Range1d, LabelSet, Label
-
-output_file("label.html", title="label.py example")
 
 source = ColumnDataSource(data=dict(height=[66, 71, 72, 68, 58, 62],
                                     weight=[165, 189, 220, 141, 260, 174],

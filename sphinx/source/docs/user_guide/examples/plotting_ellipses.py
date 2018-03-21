@@ -1,7 +1,5 @@
 from math import pi
-from bokeh.plotting import figure, show, output_file
-
-output_file('ellipses.html')
+from bokeh.plotting import figure, show
 
 p = figure(plot_width=400, plot_height=400)
 p.ellipse(x=[1, 2, 3], y=[1, 2, 3], width=[0.2, 0.3, 0.1], height=0.3,

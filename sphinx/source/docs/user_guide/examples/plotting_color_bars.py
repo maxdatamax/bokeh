@@ -1,9 +1,7 @@
 import numpy as np
 
-from bokeh.plotting import figure, output_file, show
+from bokeh.plotting import figure, show
 from bokeh.models import LogColorMapper, LogTicker, ColorBar
-
-output_file('color_bar.html')
 
 def normal2d(X, Y, sigx=1.0, sigy=1.0, mux=0.0, muy=0.0):
     z = (X-mux)**2 / sigx**2 + (Y-muy)**2 / sigy**2

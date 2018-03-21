@@ -1,9 +1,7 @@
 from bokeh.core.properties import value
-from bokeh.io import show, output_file
+from bokeh.io import show
 from bokeh.models import ColumnDataSource, HoverTool
 from bokeh.plotting import figure
-
-output_file("bar_stacked.html")
 
 fruits = ['Apples', 'Pears', 'Nectarines', 'Plums', 'Grapes', 'Strawberries']
 years = ["2015", "2016", "2017"]

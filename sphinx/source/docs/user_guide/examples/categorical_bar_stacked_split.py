@@ -1,9 +1,7 @@
-from bokeh.io import output_file, show
+from bokeh.io import show
 from bokeh.models import ColumnDataSource
 from bokeh.palettes import GnBu3, OrRd3
 from bokeh.plotting import figure
-
-output_file("stacked_split.html")
 
 fruits = ['Apples', 'Pears', 'Nectarines', 'Plums', 'Grapes', 'Strawberries']
 years = ["2015", "2016", "2017"]
