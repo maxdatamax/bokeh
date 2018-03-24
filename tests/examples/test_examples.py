@@ -73,8 +73,8 @@ def test_server_examples(server_example, example, report, bokeh_server):
     app = build_single_handler_application(example.path)
     doc = app.create_document()
 
-    # remove all periodic and timeout callbacks
-    for session_callback in list(doc._session_callbacks.keys()):
+    # remove all next-tick, periodic, and timeout callbacks
+    for session_callback in doc.session_callbacks:
         doc._remove_session_callback(session_callback)
 
     session_id = basename(example.path)
