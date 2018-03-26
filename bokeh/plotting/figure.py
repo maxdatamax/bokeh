@@ -75,11 +75,11 @@ class FigureOptions(Options):
     Which tap tool should initially be active.
     """)
 
-    x_axis_type = Either(Auto, Enum("linear", "log", "datetime"), default="auto", help="""
+    x_axis_type = Either(Auto, Enum("linear", "log", "datetime", "mercator"), default="auto", help="""
     The type of the x-axis.
     """)
 
-    y_axis_type = Either(Auto, Enum("linear", "log", "datetime"), default="auto", help="""
+    y_axis_type = Either(Auto, Enum("linear", "log", "datetime", "mercator"), default="auto", help="""
     The type of the y-axis.
     """)
 
@@ -311,6 +311,21 @@ Examples:
         plot = figure(plot_width=300, plot_height=300)
         plot.ellipse(x=[1, 2, 3], y=[1, 2, 3], width=30, height=20,
                      color="#386CB0", fill_color=None, line_width=2)
+
+        show(plot)
+
+""")
+
+    hex = _glyph_function(markers.Hex, """
+Examples:
+
+    .. bokeh-plot::
+        :source-position: above
+
+        from bokeh.plotting import figure, output_file, show
+
+        plot = figure(plot_width=300, plot_height=300)
+        plot.hex(x=[1, 2, 3], y=[1, 2, 3], size=[10,20,30], color="#74ADD1")
 
         show(plot)
 
@@ -687,6 +702,9 @@ Examples:
         If a keyword value is a list or tuple, then each call will get one
         value from the sequence.
 
+        Returns:
+            list[GlyphRenderer]
+
         Examples:
 
             Assuming a ``ColumnDataSource`` named ``source`` with columns
@@ -705,8 +723,10 @@ Examples:
                 p.hbar(bottom=stack('2016'), top=stack('2016', '2017'), x=10, width=0.9, color='red', source=source)
 
         '''
+        result = []
         for kw in _stack(stackers, "left", "right", **kw):
-            self.hbar(**kw)
+            result.append(self.hbar(**kw))
+        return result
 
     def vbar_stack(self, stackers, **kw):
         ''' Generate multiple ``VBar`` renderers for levels stacked bottom
@@ -719,6 +739,9 @@ Examples:
         Any additional keyword arguments are passed to each call to ``vbar``.
         If a keyword value is a list or tuple, then each call will get one
         value from the sequence.
+
+        Returns:
+            list[GlyphRenderer]
 
         Examples:
 
@@ -739,8 +762,10 @@ Examples:
 
 
         '''
+        result = []
         for kw in _stack(stackers, "bottom", "top", **kw):
-            self.vbar(**kw)
+            result.append(self.vbar(**kw))
+        return result
 
     def graph(self, node_source, edge_source, layout_provider, **kwargs):
         ''' Creates a network graph using the given node, edge and layout provider.
@@ -801,6 +826,7 @@ _marker_types = [
     "cross",
     "diamond",
     "diamond_cross",
+    "hex",
     "inverted_triangle",
     "square",
     "square_x",

@@ -1,6 +1,6 @@
 {
   "name": "bokehjs",
-  "version": "0.12.15dev3",
+  "version": "0.12.15dev6",
   "description": "Interactive, novel data visualization",
   "keywords": [
     "bokeh",
@@ -15,6 +15,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/bokeh/bokeh.git"
+  },
+  "engines": {
+    "node": ">=8.8 <9.0",
+    "npm": ">=5.6 <6.0"
   },
   "devDependencies": {
     "browserify": "^11.1.0",
@@ -56,7 +60,6 @@
     "request": "^2.74.0",
     "atob": "^2.0.0",
     "btoa": "^1.1.2",
-    "strip-ansi": "^3.0.1",
     "chalk": "^2.3.0",
     "ts-node": "^3.1.0",
     "webpack": "^3.0.0",
@@ -105,6 +108,7 @@
     "nouislider": "^10.0.0",
     "@types/nouislider": "^9.0.3",
     "@types/geojson": "^7946.0.1",
+    "@types/googlemaps": "^3.30.8",
     "timezone": "^1.0.6",
     "underscore.template": "^0.1.7",
     "canvas2svg": "https://github.com/bokeh/canvas2svg#v1.0.21",
